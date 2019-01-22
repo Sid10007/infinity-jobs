@@ -1,0 +1,133 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+	box-sizing: content-box;
+}
+
+.container {
+	display: grid;
+	grid: repeat(4, auto) / auto;
+}
+
+
+/*-----------------------title----------------------------*/
+#title {
+	grid-row: 1 / 2;
+	background-color: black;
+}
+
+#title img {
+	object-fit: cover;
+	text-align: center;
+	height: 75%;
+	width: 80%;
+}
+
+/*----------------------query480-----------------------*/
+@media (min-width: 480px) {
+	#title img {
+		width: 374px;
+		height: 249px;
+	}
+}
+
+/*-------------------------icons------------------------*/
+.icon {
+	padding: .5em;
+}
+
+.icon img {
+	height: 4.5em;
+	width: 4.5em;
+	padding: 2em;
+	margin-bottom: 1.5em;
+	margin-top: 1.5em;
+	border-radius: 4.5em;
+	background-color: #EFC977;
+}
+
+.button {
+	text-decoration: none;
+	padding: .8em 1.5em .8em 1.5em;
+	font-family: 'Julius Sans One', sans-serif;
+	font-weight: bold;
+	border: .1em #F0BD53 solid;
+	border-radius: .5em;
+	color: #F0BD53;
+	transition: .5s;
+}
+
+#company {
+	padding: 1em;
+	grid-row: 2 / 3; 
+}
+
+#jobseeker {
+	padding: 1em;
+	grid-row: 3 / 4;
+}
+
+/*----------------------query500-----------------------*/
+@media (min-width: 500px) {
+	.container {
+		display: grid;
+		grid: repeat(3, auto) / auto;
+	}
+
+	.icon {
+		grid-row: 2 / 3;
+		display: grid;
+		grid: auto / auto auto;
+	}
+
+	.icon img {
+		height: 6em;
+		width: 6em;
+		padding: 2em;
+		border-radius: 6em;
+	}
+
+	.button {
+		padding: 1em 3em 1em 3em;
+		border: .1em #F0BD53 solid;
+		border-radius: .8em;
+	}
+
+	#company {
+		grid-row: 1;
+		grid-column: 1;
+		padding: 1.9em;
+	}
+
+	#jobseeker {
+		grid-row: 1;
+		grid-column: 2;
+		padding: 1.9em;
+	}
+}
+
+/*----------------------query1000-----------------------*/
+@media (min-width: 1000px) {
+	.icon img {
+		height: 8em;
+		width: 8em;
+		padding: 2em;
+		border-radius: 8em;
+	}
+}
+
+.button:hover {
+	background-color: #F0BD53;
+	color: white;
+}
+
+/*-------------------footer------------------*/
+#footer {
+	grid-row: 4 / 5;
+	font-weight: bolder;
+	color: #BFBFBF;
+	font-family: 'Julius Sans One', sans-serif;
+	padding-top: 5em;
+	padding-bottom: 1em;
+}

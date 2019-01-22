@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>infinityjobs.com / LOGIN</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+</head>
+<body>
+	<ul>
+		{% for user in users %}
+		<li>{{user.userid}} : {{user.username}} : {{user.email}}</li>
+		{% endfor %}
+	</ul>
+</body>
+</html>

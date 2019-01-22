@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>infinityjobs.com / LOGIN</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+</head>
+<body>
+	<div id="byjob">	
+		<form name="getdata" method="post" action="{{ url_for('getdata') }}">
+			<select name="joblist">
+				{% for job in jobs %}
+				<option value="{{ job.jobid }}">{{job.jobdesc}} : {{job.jobid}} : {{job.companyname}}</option>
+				{% endfor %}
+			</select>
+			<button>GET</button>
+		</form>
+	</div>
+	<div id="byuser">	
+		<form name="getdata" method="post" action="{{ url_for('getdata') }}">
+			<select name="userlist">
+				{% for user in users %}
+				<option value="{{ user.userid }}">{{user.username}} : {{user.userid}}</option>
+				{% endfor %}
+			</select>
+			<button>GET</button>
+		</form>
+	</div>
+</body>
+</html>

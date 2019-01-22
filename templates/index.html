@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>infinityjobs.com</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../static/css/index.css">	
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div id="title">
+			<center><img src="../static/title.jpg"></center>
+		</div>
+		<div class="icon">	
+			<div id="company">
+				<center><img src="../static/company.png"></center>
+				<center><a href="{{ url_for('logincompany') }}" class="button">COMPANY</a></center>
+			</div>
+			<div id="jobseeker">
+				<center><img src="../static/jobseek.png"></center>
+				<center><a href="{{ url_for('loginjobseeker') }}" class="button">JOBSEEKER</a></center>
+			</div>
+		</div>
+		<div id="footer">
+			<center><p>INFINITY JOBS &copy ALL RIGHTS RESERVED</p><a href="{{ url_for('admin') }}" style="text-decoration: none;">ADMIN</a></center>
+		</div>
+	</div>
+</body>
+</html>

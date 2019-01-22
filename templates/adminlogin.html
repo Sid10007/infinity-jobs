@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>infinityjobs.com / LOGIN</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+	<style type="text/css">
+		table {
+			padding: 2em;
+			padding-left: 1.3em;
+			font-weight: bold;
+			font-family: 'Julius Sans One', sans-serif;
+			font-size: .7em;
+			color: #BFBFBF;
+		}
+
+		td {
+			padding: .3em;
+		}
+		input {
+			border: .05em solid #BFBFBF;
+			border-radius: .3em;
+			padding: .2em .65em;
+			font-size: .9em;
+			font-family: 'Julius Sans One', sans-serif;
+		}
+		input:focus {
+			font-family: 'Julius Sans One', sans-serif;
+			border: .05em solid #F0BD53;
+		}
+		.button {
+		    font-family: sans-serif;
+			font-weight: lighter;
+			border: .1em solid #BFBFBF;
+			color: #BFBFBF;
+			border-radius: .3em;
+			background-color: white;
+			font-size: .8em;
+			margin-left: 1.8em;
+			width: 5.5em;
+		}
+
+		.button:hover {
+		    background-color: #BFBFBF;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<form name="login" action="{{ url_for('show') }}" method="post">
+		<table>
+			<tr>
+				<td>Admin</td>
+				<td>:</td>
+				<td><input type="text" name="admin"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td>:</td>
+				<td><input type="password" name="password"></td>
+			</tr>
+		</table>
+		<button class="button">LOGIN</button>
+	</form> 
+</body>
+</html>

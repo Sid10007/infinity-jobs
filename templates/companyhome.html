@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>infinityjobs.com/HOME</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../static/css/home.css">
+</head>
+<body>
+	<div class="container">
+		<div id="add">	
+			<div id="title">
+				<img src="../static/title2.jpg">
+			</div>
+			<div class="navigation">
+				<a href="#" id="selected">Add</a><a href="#">View</a>
+			</div>
+				<form name="add" action="{{ url_for('add') }}" method="post">
+				<table>
+					<tr>
+						<td>Job Desc</td>
+						<td>:</td>
+						<td><input type="text" name="jobdesc"></td>
+					</tr>
+					<tr>
+						<td>Salary</td>
+						<td>:</td>
+						<td><input type="number" name="salary"></td>
+					</tr>
+					<tr>
+						<td>Job Id</td>
+						<td>:</td>
+						<td><input type="number" name="jobid"></td>
+					</tr>
+				</table> 
+				<button class="button" style="margin-left: 2em;">ADD</button>
+				</form>
+		</div>
+		<div id="view" class="notselected">
+			<div id="title">
+				<img src="../static/title2.jpg">
+			</div>
+			<div class="navigation">
+				<a href="#">Add</a><a href="#" id="selected">View</a>
+			</div>
+			<h1>List of Applications :</h1>
+			<form name="view" method="post" action="{{ url_for('view2') }}">
+					<button class="button" style="margin-left: 2em;">View</button>
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript" src="../static/js/viewadd.js"></script>
+</body>
+</html> 
